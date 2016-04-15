@@ -32,7 +32,6 @@ namespace LetsPlayHelper
             dm = new DataManager();
             sm = new StatusManager();
             timer1.Start();
-
             
         }
 
