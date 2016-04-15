@@ -11,6 +11,7 @@ Example features:
 *Display remaining disk space
 *Auto mute for TeamSpeak (if enabled)
 *Auto mute for Skype (if enabled)
+*Timer alerts
 *Do you want to add a feature? - Send me a pull request
 
 ####Contributing
