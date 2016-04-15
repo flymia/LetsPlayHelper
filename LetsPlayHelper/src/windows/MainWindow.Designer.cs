@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.recTime = new System.Windows.Forms.Label();
             this.recStatus = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             this.recTime.Size = new System.Drawing.Size(413, 104);
             this.recTime.TabIndex = 0;
             this.recTime.Text = "00:00:00";
+            this.recTime.Click += new System.EventHandler(this.recTime_Click);
             // 
             // recStatus
             // 
@@ -156,6 +158,7 @@
             this.Controls.Add(this.recTime);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";

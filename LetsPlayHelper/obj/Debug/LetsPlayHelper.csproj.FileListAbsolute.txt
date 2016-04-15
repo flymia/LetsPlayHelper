@@ -18,3 +18,5 @@ D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug
 D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\LetsPlayHelper.Properties.Resources.resources
 D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\LetsPlayHelper.src.windows.SettingsWindow.resources
 D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\LetsPlayHelper.csproj.GenerateResource.Cache
+D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\Interop.SKYPE4COMLib.dll
+D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\LetsPlayHelper.csproj.ResolveComReference.cache

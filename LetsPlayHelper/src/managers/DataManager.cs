@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LetsPlayHelper.src.windows;
+using SKYPE4COMLib;
+using System.IO;
 
 namespace LetsPlayHelper.src.managers
 {
@@ -37,7 +39,7 @@ namespace LetsPlayHelper.src.managers
             return megabytes / 1024.0;
         }
 
-        public String getFreeDiskSpace()
+        public String getFreeDiskSpace(String folder)
         {
             System.IO.DriveInfo drive = new System.IO.DriveInfo(folder);
             System.IO.DriveInfo a = new System.IO.DriveInfo(drive.Name);
@@ -49,7 +51,7 @@ namespace LetsPlayHelper.src.managers
             return HDPercentageUsed.ToString();
         }
 
-        public String getMaxDiskSpace()
+        public String getMaxDiskSpace(String folder)
         {
             System.IO.DriveInfo drive = new System.IO.DriveInfo(folder);
             System.IO.DriveInfo a = new System.IO.DriveInfo(drive.Name);

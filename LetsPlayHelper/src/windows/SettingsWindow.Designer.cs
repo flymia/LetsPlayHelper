@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsWindow));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.mainTabPage = new System.Windows.Forms.TabPage();
             this.TScheckBox = new System.Windows.Forms.CheckBox();
@@ -49,9 +50,12 @@
             this.checkForButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.mainTabPage.SuspendLayout();
             this.updateTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -188,6 +192,8 @@
             // 
             // updateTabPage
             // 
+            this.updateTabPage.Controls.Add(this.label2);
+            this.updateTabPage.Controls.Add(this.pictureBox1);
             this.updateTabPage.Controls.Add(this.currentVersionLabel);
             this.updateTabPage.Controls.Add(this.availVersionLabel);
             this.updateTabPage.Controls.Add(this.changeLogLabel);
@@ -273,6 +279,26 @@
             this.checkForButton.UseVisualStyleBackColor = true;
             this.checkForButton.Click += new System.EventHandler(this.checkForButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LetsPlayHelper.Properties.Resources.logoICO;
+            this.pictureBox1.Location = new System.Drawing.Point(418, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(217, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 19);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "LPH - Let\'s Play Helper";
+            // 
             // SettingsWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,16 +306,18 @@
             this.ClientSize = new System.Drawing.Size(477, 410);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SettingsWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SettingsWindow";
+            this.Text = "LPH - Settings";
             this.Load += new System.EventHandler(this.SettingsWindow_Load);
             this.tabControl1.ResumeLayout(false);
             this.mainTabPage.ResumeLayout(false);
             this.mainTabPage.PerformLayout();
             this.updateTabPage.ResumeLayout(false);
             this.updateTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,5 +344,7 @@
         private System.Windows.Forms.CheckBox TScheckBox;
         private System.Windows.Forms.CheckBox skypeCheckBox;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

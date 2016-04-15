@@ -16,9 +16,9 @@ namespace LetsPlayHelper.src.windows
         /// <summary>
         /// This class is for the settings. It saves the settings in a specific XML file.
         /// </summary>
-
         private DataManager dm;
         private UpdateManager um;
+
 
         public SettingsWindow()
         {
@@ -35,8 +35,25 @@ namespace LetsPlayHelper.src.windows
 
             comboBox1.Text = Properties.Settings.Default.recDisk.ToString();
             pathTextBox.Text = Properties.Settings.Default.recPath.ToString();
-        }
 
+            if(Properties.Settings.Default.skypeAutoAFK == true)
+            {
+                skypeCheckBox.Checked = true;
+            }
+            else
+            {
+                skypeCheckBox.Checked = false;
+            }
+
+            if(Properties.Settings.Default.TSAutoMute == true)
+            {
+                TScheckBox.Checked = true;
+            }
+            else
+            {
+                TScheckBox.Checked = false;
+            }
+        }
 
         /// <summary>
         /// Update check logic
@@ -91,6 +108,5 @@ namespace LetsPlayHelper.src.windows
             folderBrowserDialog1.ShowDialog();
             pathTextBox.Text = folderBrowserDialog1.SelectedPath;
         }
-
     }
 }

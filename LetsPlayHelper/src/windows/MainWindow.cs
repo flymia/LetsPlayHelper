@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LetsPlayHelper.src.managers;
 using LetsPlayHelper.src.windows;
 using System.Runtime.InteropServices;
+using SKYPE4COMLib;
 
 namespace LetsPlayHelper
 {
@@ -40,7 +41,7 @@ namespace LetsPlayHelper
         {
             textBox1.Text = Properties.Settings.Default.recDisk.ToString();
             progressBar1.Value = dm.getPercentage();
-            freeSpaceLabel.Text = dm.getFreeDiskSpace() + " / " + dm.getMaxDiskSpace();
+            freeSpaceLabel.Text = dm.getFreeDiskSpace(Properties.Settings.Default.recPath.ToString()) + " / " + dm.getMaxDiskSpace(Properties.Settings.Default.recPath);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -53,6 +54,7 @@ namespace LetsPlayHelper
                     recStatus.ForeColor = Color.Black;
                     recStatus.Text = "Stopped";
                     sm.resetRecTime();
+                   
                 }
                 else
                 {
@@ -76,7 +78,7 @@ namespace LetsPlayHelper
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,5 +87,23 @@ namespace LetsPlayHelper
             sw.Show();
         }
 
-   }
+        private void recTime_Click(object sender, EventArgs e)
+        {
+                if (sm.getRecStatus() == true)
+                {
+                    sm.stopRec();
+                    recStatus.ForeColor = Color.Black;
+                    recStatus.Text = "Stopped";
+                    sm.resetRecTime();
+                }
+                else
+                {
+                    sm.startRec();
+                    recStatus.ForeColor = Color.Red;
+                    recStatus.Text = "Recording";
+                    recTimer.Start();   
+                }
+            
+        }
+    }
 }
