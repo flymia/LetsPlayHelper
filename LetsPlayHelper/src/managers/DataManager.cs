@@ -18,7 +18,7 @@ namespace LetsPlayHelper.src.managers
 
         public DataManager()
         {
-           
+            
         }
 
         public String getVersion()

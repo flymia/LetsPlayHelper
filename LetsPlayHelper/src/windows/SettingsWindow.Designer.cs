@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.mainTabPage = new System.Windows.Forms.TabPage();
+            this.TScheckBox = new System.Windows.Forms.CheckBox();
+            this.skypeCheckBox = new System.Windows.Forms.CheckBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.recDiskLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -42,12 +47,7 @@
             this.currentVersionDescLabel = new System.Windows.Forms.Label();
             this.changelogBrowser = new System.Windows.Forms.WebBrowser();
             this.checkForButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pathTextBox = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.skypeCheckBox = new System.Windows.Forms.CheckBox();
-            this.TScheckBox = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.mainTabPage.SuspendLayout();
@@ -81,6 +81,55 @@
             this.mainTabPage.TabIndex = 0;
             this.mainTabPage.Text = "Main";
             this.mainTabPage.UseVisualStyleBackColor = true;
+            // 
+            // TScheckBox
+            // 
+            this.TScheckBox.AutoSize = true;
+            this.TScheckBox.Enabled = false;
+            this.TScheckBox.Location = new System.Drawing.Point(10, 118);
+            this.TScheckBox.Name = "TScheckBox";
+            this.TScheckBox.Size = new System.Drawing.Size(181, 17);
+            this.TScheckBox.TabIndex = 7;
+            this.TScheckBox.Text = "Enable TeamSpeak 3 Auto Mute";
+            this.toolTip1.SetToolTip(this.TScheckBox, "Feature will be implemented later");
+            this.TScheckBox.UseVisualStyleBackColor = true;
+            // 
+            // skypeCheckBox
+            // 
+            this.skypeCheckBox.AutoSize = true;
+            this.skypeCheckBox.Location = new System.Drawing.Point(10, 95);
+            this.skypeCheckBox.Name = "skypeCheckBox";
+            this.skypeCheckBox.Size = new System.Drawing.Size(139, 17);
+            this.skypeCheckBox.TabIndex = 6;
+            this.skypeCheckBox.Text = "Enable Skype auto AFK";
+            this.skypeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(401, 46);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(59, 23);
+            this.searchButton.TabIndex = 5;
+            this.searchButton.Text = "Search...";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // pathTextBox
+            // 
+            this.pathTextBox.Location = new System.Drawing.Point(101, 48);
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.Size = new System.Drawing.Size(291, 20);
+            this.pathTextBox.TabIndex = 4;
+            this.pathTextBox.Text = "C:\\";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Recording folder:";
             // 
             // saveButton
             // 
@@ -212,7 +261,7 @@
             this.changelogBrowser.Name = "changelogBrowser";
             this.changelogBrowser.Size = new System.Drawing.Size(434, 250);
             this.changelogBrowser.TabIndex = 1;
-            this.changelogBrowser.Url = new System.Uri("about:blank", System.UriKind.Absolute);
+            this.changelogBrowser.Url = new System.Uri("http://31.214.243.215/LPH/changelog.txt", System.UriKind.Absolute);
             // 
             // checkForButton
             // 
@@ -223,55 +272,6 @@
             this.checkForButton.Text = "Check for updates";
             this.checkForButton.UseVisualStyleBackColor = true;
             this.checkForButton.Click += new System.EventHandler(this.checkForButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Recording folder:";
-            // 
-            // pathTextBox
-            // 
-            this.pathTextBox.Location = new System.Drawing.Point(101, 48);
-            this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.Size = new System.Drawing.Size(291, 20);
-            this.pathTextBox.TabIndex = 4;
-            this.pathTextBox.Text = "C:\\";
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(401, 46);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(59, 23);
-            this.searchButton.TabIndex = 5;
-            this.searchButton.Text = "Search...";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // skypeCheckBox
-            // 
-            this.skypeCheckBox.AutoSize = true;
-            this.skypeCheckBox.Location = new System.Drawing.Point(10, 95);
-            this.skypeCheckBox.Name = "skypeCheckBox";
-            this.skypeCheckBox.Size = new System.Drawing.Size(139, 17);
-            this.skypeCheckBox.TabIndex = 6;
-            this.skypeCheckBox.Text = "Enable Skype auto AFK";
-            this.skypeCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // TScheckBox
-            // 
-            this.TScheckBox.AutoSize = true;
-            this.TScheckBox.Enabled = false;
-            this.TScheckBox.Location = new System.Drawing.Point(10, 118);
-            this.TScheckBox.Name = "TScheckBox";
-            this.TScheckBox.Size = new System.Drawing.Size(181, 17);
-            this.TScheckBox.TabIndex = 7;
-            this.TScheckBox.Text = "Enable TeamSpeak 3 Auto Mute";
-            this.toolTip1.SetToolTip(this.TScheckBox, "Feature will be implemented later");
-            this.TScheckBox.UseVisualStyleBackColor = true;
             // 
             // SettingsWindow
             // 

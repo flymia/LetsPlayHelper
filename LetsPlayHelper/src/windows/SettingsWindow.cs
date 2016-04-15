@@ -18,6 +18,7 @@ namespace LetsPlayHelper.src.windows
         /// </summary>
 
         private DataManager dm;
+        private UpdateManager um;
 
         public SettingsWindow()
         {
@@ -30,6 +31,8 @@ namespace LetsPlayHelper.src.windows
             dm = new DataManager();
             currentVersionLabel.Text = dm.getVersion();
 
+            um = new UpdateManager();
+
             comboBox1.Text = Properties.Settings.Default.recDisk.ToString();
             pathTextBox.Text = Properties.Settings.Default.recPath.ToString();
         }
@@ -40,7 +43,17 @@ namespace LetsPlayHelper.src.windows
         /// </summary>
         private void checkForButton_Click(object sender, EventArgs e)
         {
-            
+            if (um.isVersionOut())
+            {
+                availVersionLabel.ForeColor = Color.Red;
+                availVersionLabel.Text = um.getVersion();
+                MessageBox.Show("New version is out! Please download now!", "New version", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                availVersionLabel.ForeColor = Color.Green;
+                availVersionLabel.Text = um.getVersion();
+            }
         }
 
         /// <summary>
