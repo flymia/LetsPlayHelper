@@ -13,8 +13,6 @@ namespace LetsPlayHelper.src.managers
     /// timer in the main class.
     /// </summary>
 
-
-
     class StatusManager
     {
         private bool recording = false;
@@ -38,7 +36,6 @@ namespace LetsPlayHelper.src.managers
         /// <summary>
         /// Returns the rec status.
         /// </summary>
-        /// <returns></returns>
         public bool getRecStatus()
         {
             return recording;
