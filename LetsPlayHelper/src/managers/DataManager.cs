@@ -11,23 +11,30 @@ namespace LetsPlayHelper.src.managers
 {
     class DataManager
     {
+		//Saves the main version of LPH
         private String _VERSION = "Alpha v0.0.1";
 
+		//Temporary storage of the recPath Properity.
         private String folder = Properties.Settings.Default.recPath.ToString();
 
         static readonly string[] SizeSuffixes =
                    { "bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
 
+		//Basic constructor 
         public DataManager()
         {
             
         }
-
+	
+		//Returns the version to the other classes
         public String getVersion()
         {
             return _VERSION;
         }
 
+		///<summary>
+		///Converting and shorting the variables
+		///</summary>
         static double ConvertBytesToMegabytes(double bytes)
         {
             return (bytes / 1024f) / 1024f;
