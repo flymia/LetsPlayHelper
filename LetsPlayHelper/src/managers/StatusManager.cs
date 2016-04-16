@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace LetsPlayHelper.src.managers
 { 
@@ -22,6 +23,8 @@ namespace LetsPlayHelper.src.managers
         private Form1 mainWindow;
         private System.Windows.Forms.Timer _timer = new System.Windows.Forms.Timer();
         private Skype skype;
+
+        private bool hasPlayed = false;
 
         public StatusManager()
         {
@@ -111,6 +114,7 @@ namespace LetsPlayHelper.src.managers
                                               timeSinceStartTime.Seconds);
 
             _currentElapsedTime = timeSinceStartTime + _totalElapsedTime;
+            playOnSelectedTime(Properties.Settings.Default.playOnTime);
          }
 
         /// <summary>
@@ -119,12 +123,34 @@ namespace LetsPlayHelper.src.managers
         public void resetRecTime()
         {
             _timer.Stop();
-
+            hasPlayed = false;
             _totalElapsedTime = TimeSpan.Zero;
             _currentElapsedTime = TimeSpan.Zero;
         }
 
-        
+        public void playOnSelectedTime(int minutes)
+        {
+            
 
+            if(_currentElapsedTime.TotalMinutes > minutes)
+            {
+                if(hasPlayed == false)
+                {
+                    try
+                    {
+                        SoundPlayer sndPlayer = new SoundPlayer(LetsPlayHelper.Properties.Resources.timerend);
+                        sndPlayer.Play();
+                        hasPlayed = true;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Error - " + e.Message);
+                    }
+                }else
+                {
+                    return;
+                }
+            }
+        }
     }
 }

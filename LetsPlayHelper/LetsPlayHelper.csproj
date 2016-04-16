@@ -145,6 +145,7 @@
     <Content Include="logoICO.ico" />
     <Content Include="src\img\logoICO.ico" />
     <Content Include="src\lib\Skype4COM.dll" />
+    <Content Include="src\sound\timerend.wav" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

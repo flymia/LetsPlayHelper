@@ -33,14 +33,11 @@ namespace LetsPlayHelper
         private void Form1_Load(object sender, EventArgs e)
         {
             dm = new DataManager();
-            if (dm.startPathExists())
+            if (!dm.startPathExists())
             {
-                
+                Properties.Settings.Default.recPath = "C:";
             }
-            else
-            {
-                Properties.Settings.Default.recPath = "C:/";
-            }
+
             sm = new StatusManager();
             hm = new HotKeyManager();
             hm.KeyPressed += KeyPressed;
@@ -122,6 +119,11 @@ namespace LetsPlayHelper
                     recStatus.Text = "Recording";
                     recTimer.Start();   
                 }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

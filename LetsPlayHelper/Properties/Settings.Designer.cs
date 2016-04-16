@@ -70,5 +70,29 @@ namespace LetsPlayHelper.Properties {
                 this["TSAutoMute"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool playTimerSound {
+            get {
+                return ((bool)(this["playTimerSound"]));
+            }
+            set {
+                this["playTimerSound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int playOnTime {
+            get {
+                return ((int)(this["playOnTime"]));
+            }
+            set {
+                this["playOnTime"] = value;
+            }
+        }
     }
 }

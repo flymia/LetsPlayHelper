@@ -32,44 +32,53 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsWindow));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.mainTabPage = new System.Windows.Forms.TabPage();
-            this.TScheckBox = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.playTimeBox = new System.Windows.Forms.NumericUpDown();
+            this.playSoundcheckBox = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.skypeCheckBox = new System.Windows.Forms.CheckBox();
+            this.TScheckBox = new System.Windows.Forms.CheckBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.updateTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.changelogBrowser = new System.Windows.Forms.WebBrowser();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.currentVersionLabel = new System.Windows.Forms.Label();
             this.availVersionLabel = new System.Windows.Forms.Label();
-            this.changeLogLabel = new System.Windows.Forms.Label();
             this.availVersionDescLabel = new System.Windows.Forms.Label();
             this.currentVersionDescLabel = new System.Windows.Forms.Label();
-            this.changelogBrowser = new System.Windows.Forms.WebBrowser();
             this.checkForButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.mainTabPage.SuspendLayout();
-            this.updateTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playTimeBox)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.updateTabPage.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.mainTabPage);
             this.tabControl1.Controls.Add(this.updateTabPage);
-            this.tabControl1.Location = new System.Drawing.Point(1, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(475, 413);
+            this.tabControl1.Size = new System.Drawing.Size(476, 410);
             this.tabControl1.TabIndex = 0;
             // 
             // mainTabPage
             // 
+            this.mainTabPage.Controls.Add(this.groupBox3);
             this.mainTabPage.Controls.Add(this.groupBox1);
             this.mainTabPage.Controls.Add(this.searchButton);
             this.mainTabPage.Controls.Add(this.pathTextBox);
@@ -78,10 +87,89 @@
             this.mainTabPage.Location = new System.Drawing.Point(4, 22);
             this.mainTabPage.Name = "mainTabPage";
             this.mainTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.mainTabPage.Size = new System.Drawing.Size(467, 387);
+            this.mainTabPage.Size = new System.Drawing.Size(468, 384);
             this.mainTabPage.TabIndex = 0;
             this.mainTabPage.Text = "Main";
             this.mainTabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.playTimeBox);
+            this.groupBox3.Controls.Add(this.playSoundcheckBox);
+            this.groupBox3.Location = new System.Drawing.Point(240, 48);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(203, 69);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Timer";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(146, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "minute(s).";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Play sound after";
+            // 
+            // playTimeBox
+            // 
+            this.playTimeBox.Location = new System.Drawing.Point(95, 44);
+            this.playTimeBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.playTimeBox.Name = "playTimeBox";
+            this.playTimeBox.Size = new System.Drawing.Size(45, 20);
+            this.playTimeBox.TabIndex = 10;
+            this.playTimeBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // playSoundcheckBox
+            // 
+            this.playSoundcheckBox.AutoSize = true;
+            this.playSoundcheckBox.Location = new System.Drawing.Point(9, 19);
+            this.playSoundcheckBox.Name = "playSoundcheckBox";
+            this.playSoundcheckBox.Size = new System.Drawing.Size(139, 17);
+            this.playSoundcheckBox.TabIndex = 6;
+            this.playSoundcheckBox.Text = "Enable Skype auto AFK";
+            this.playSoundcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.skypeCheckBox);
+            this.groupBox1.Controls.Add(this.TScheckBox);
+            this.groupBox1.Location = new System.Drawing.Point(9, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 64);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Additional features";
+            // 
+            // skypeCheckBox
+            // 
+            this.skypeCheckBox.AutoSize = true;
+            this.skypeCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.skypeCheckBox.Name = "skypeCheckBox";
+            this.skypeCheckBox.Size = new System.Drawing.Size(139, 17);
+            this.skypeCheckBox.TabIndex = 6;
+            this.skypeCheckBox.Text = "Enable Skype auto AFK";
+            this.skypeCheckBox.UseVisualStyleBackColor = true;
             // 
             // TScheckBox
             // 
@@ -94,16 +182,6 @@
             this.TScheckBox.Text = "Enable TeamSpeak 3 Auto Mute";
             this.toolTip1.SetToolTip(this.TScheckBox, "Feature will be implemented later");
             this.TScheckBox.UseVisualStyleBackColor = true;
-            // 
-            // skypeCheckBox
-            // 
-            this.skypeCheckBox.AutoSize = true;
-            this.skypeCheckBox.Location = new System.Drawing.Point(6, 19);
-            this.skypeCheckBox.Name = "skypeCheckBox";
-            this.skypeCheckBox.Size = new System.Drawing.Size(139, 17);
-            this.skypeCheckBox.TabIndex = 6;
-            this.skypeCheckBox.Text = "Enable Skype auto AFK";
-            this.skypeCheckBox.UseVisualStyleBackColor = true;
             // 
             // searchButton
             // 
@@ -145,21 +223,39 @@
             // 
             // updateTabPage
             // 
+            this.updateTabPage.Controls.Add(this.groupBox2);
             this.updateTabPage.Controls.Add(this.label2);
             this.updateTabPage.Controls.Add(this.pictureBox1);
             this.updateTabPage.Controls.Add(this.currentVersionLabel);
             this.updateTabPage.Controls.Add(this.availVersionLabel);
-            this.updateTabPage.Controls.Add(this.changeLogLabel);
             this.updateTabPage.Controls.Add(this.availVersionDescLabel);
             this.updateTabPage.Controls.Add(this.currentVersionDescLabel);
-            this.updateTabPage.Controls.Add(this.changelogBrowser);
             this.updateTabPage.Controls.Add(this.checkForButton);
             this.updateTabPage.Location = new System.Drawing.Point(4, 22);
             this.updateTabPage.Name = "updateTabPage";
-            this.updateTabPage.Size = new System.Drawing.Size(467, 387);
+            this.updateTabPage.Size = new System.Drawing.Size(468, 384);
             this.updateTabPage.TabIndex = 1;
             this.updateTabPage.Text = "Update";
             this.updateTabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.changelogBrowser);
+            this.groupBox2.Location = new System.Drawing.Point(8, 101);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(453, 275);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Latest changelog:";
+            // 
+            // changelogBrowser
+            // 
+            this.changelogBrowser.Location = new System.Drawing.Point(8, 15);
+            this.changelogBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.changelogBrowser.Name = "changelogBrowser";
+            this.changelogBrowser.Size = new System.Drawing.Size(439, 254);
+            this.changelogBrowser.TabIndex = 1;
+            this.changelogBrowser.Url = new System.Uri("http://31.214.243.215/LPH/changelog.txt", System.UriKind.Absolute);
             // 
             // label2
             // 
@@ -203,16 +299,6 @@
             this.availVersionLabel.TabIndex = 5;
             this.availVersionLabel.Text = "Please check for updates first";
             // 
-            // changeLogLabel
-            // 
-            this.changeLogLabel.AutoSize = true;
-            this.changeLogLabel.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.changeLogLabel.Location = new System.Drawing.Point(23, 115);
-            this.changeLogLabel.Name = "changeLogLabel";
-            this.changeLogLabel.Size = new System.Drawing.Size(111, 16);
-            this.changeLogLabel.TabIndex = 4;
-            this.changeLogLabel.Text = "Latest changelog:";
-            // 
             // availVersionDescLabel
             // 
             this.availVersionDescLabel.AutoSize = true;
@@ -233,15 +319,6 @@
             this.currentVersionDescLabel.TabIndex = 2;
             this.currentVersionDescLabel.Text = "Current version:";
             // 
-            // changelogBrowser
-            // 
-            this.changelogBrowser.Location = new System.Drawing.Point(16, 134);
-            this.changelogBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.changelogBrowser.Name = "changelogBrowser";
-            this.changelogBrowser.Size = new System.Drawing.Size(434, 250);
-            this.changelogBrowser.TabIndex = 1;
-            this.changelogBrowser.Url = new System.Uri("http://31.214.243.215/LPH/changelog.txt", System.UriKind.Absolute);
-            // 
             // checkForButton
             // 
             this.checkForButton.Location = new System.Drawing.Point(16, 14);
@@ -251,17 +328,6 @@
             this.checkForButton.Text = "Check for updates";
             this.checkForButton.UseVisualStyleBackColor = true;
             this.checkForButton.Click += new System.EventHandler(this.checkForButton_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.skypeCheckBox);
-            this.groupBox1.Controls.Add(this.TScheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(9, 48);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 64);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Additional features";
             // 
             // SettingsWindow
             // 
@@ -279,11 +345,15 @@
             this.tabControl1.ResumeLayout(false);
             this.mainTabPage.ResumeLayout(false);
             this.mainTabPage.PerformLayout();
-            this.updateTabPage.ResumeLayout(false);
-            this.updateTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playTimeBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.updateTabPage.ResumeLayout(false);
+            this.updateTabPage.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,7 +367,6 @@
         private System.Windows.Forms.Label currentVersionDescLabel;
         private System.Windows.Forms.WebBrowser changelogBrowser;
         private System.Windows.Forms.Button checkForButton;
-        private System.Windows.Forms.Label changeLogLabel;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label availVersionLabel;
         private System.Windows.Forms.Label currentVersionLabel;
@@ -311,5 +380,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox playSoundcheckBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown playTimeBox;
     }
 }

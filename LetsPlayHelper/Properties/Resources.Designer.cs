@@ -69,5 +69,14 @@ namespace LetsPlayHelper.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.IO.UnmanagedMemoryStream ähnlich wie System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream timerend {
+            get {
+                return ResourceManager.GetStream("timerend", resourceCulture);
+            }
+        }
     }
 }

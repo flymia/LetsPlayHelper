@@ -55,24 +55,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LetsPlayHelper.exe" size="1139624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LetsPlayHelper.exe" size="1324968">
       <assemblyIdentity name="LetsPlayHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Kx+9rrX7tnVHnQODTn08Un1SueeQLz7aD47ab8/1ROA=</dsig:DigestValue>
+        <dsig:DigestValue>tiKmK8P0OUqWAJjoZu+cqwSjnvm9mG0MlB4MREUuGNY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="LetsPlayHelper.exe.config" size="1357">
+  <file name="LetsPlayHelper.exe.config" size="1637">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>eGE5MMDLyDns6QP2Bm9gyNc8Me6wuDxTqE2zbMKVpww=</dsig:DigestValue>
+      <dsig:DigestValue>7Gmhj1p79V6Kk9+hI+xHq89e9h8V5aj8/kiwn0mqiwM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logoICO.ico" size="370070">
@@ -100,6 +100,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>l3h9qWk0VQZfdVSxOrjmmjNhSevUZYQVZTXTHahzEgM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="src\sound\timerend.wav" size="182550">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nkHWPWzM9sYnq8zDdgqcjl8M41FCYLxaT1B55QfnWqg=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

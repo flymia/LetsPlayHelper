@@ -35,6 +35,7 @@ namespace LetsPlayHelper.src.windows
 
             
             pathTextBox.Text = Properties.Settings.Default.recPath.ToString();
+            playTimeBox.Value = Properties.Settings.Default.playOnTime;
 
             if(Properties.Settings.Default.skypeAutoAFK == true)
             {
@@ -53,6 +54,14 @@ namespace LetsPlayHelper.src.windows
             {
                 TScheckBox.Checked = false;
             }
+            if(Properties.Settings.Default.playTimerSound == true)
+            {
+                playSoundcheckBox.Checked = true;
+            }else
+            {
+                playSoundcheckBox.Checked = false;
+            }
+
         }
 
         /// <summary>
@@ -80,6 +89,7 @@ namespace LetsPlayHelper.src.windows
         {
            
             Properties.Settings.Default.recPath = pathTextBox.Text;
+            Properties.Settings.Default.playOnTime = Convert.ToInt32(playTimeBox.Value);
 
             if (skypeCheckBox.Checked)
             {
@@ -98,6 +108,14 @@ namespace LetsPlayHelper.src.windows
             {
                 Properties.Settings.Default.TSAutoMute = false;
             }
+            if (playSoundcheckBox.Checked)
+            {
+                Properties.Settings.Default.playTimerSound = true;
+            }else
+            {
+                Properties.Settings.Default.playTimerSound = false;
+            }
+            
 
             Properties.Settings.Default.Save();
             this.Close();    
