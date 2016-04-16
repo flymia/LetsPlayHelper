@@ -38,9 +38,9 @@
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
-            this.recDiskLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.updateTabPage = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.currentVersionLabel = new System.Windows.Forms.Label();
             this.availVersionLabel = new System.Windows.Forms.Label();
             this.changeLogLabel = new System.Windows.Forms.Label();
@@ -50,12 +50,12 @@
             this.checkForButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.mainTabPage.SuspendLayout();
             this.updateTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -70,14 +70,11 @@
             // 
             // mainTabPage
             // 
-            this.mainTabPage.Controls.Add(this.TScheckBox);
-            this.mainTabPage.Controls.Add(this.skypeCheckBox);
+            this.mainTabPage.Controls.Add(this.groupBox1);
             this.mainTabPage.Controls.Add(this.searchButton);
             this.mainTabPage.Controls.Add(this.pathTextBox);
             this.mainTabPage.Controls.Add(this.label1);
             this.mainTabPage.Controls.Add(this.saveButton);
-            this.mainTabPage.Controls.Add(this.recDiskLabel);
-            this.mainTabPage.Controls.Add(this.comboBox1);
             this.mainTabPage.Location = new System.Drawing.Point(4, 22);
             this.mainTabPage.Name = "mainTabPage";
             this.mainTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -90,7 +87,7 @@
             // 
             this.TScheckBox.AutoSize = true;
             this.TScheckBox.Enabled = false;
-            this.TScheckBox.Location = new System.Drawing.Point(10, 118);
+            this.TScheckBox.Location = new System.Drawing.Point(6, 42);
             this.TScheckBox.Name = "TScheckBox";
             this.TScheckBox.Size = new System.Drawing.Size(181, 17);
             this.TScheckBox.TabIndex = 7;
@@ -101,7 +98,7 @@
             // skypeCheckBox
             // 
             this.skypeCheckBox.AutoSize = true;
-            this.skypeCheckBox.Location = new System.Drawing.Point(10, 95);
+            this.skypeCheckBox.Location = new System.Drawing.Point(6, 19);
             this.skypeCheckBox.Name = "skypeCheckBox";
             this.skypeCheckBox.Size = new System.Drawing.Size(139, 17);
             this.skypeCheckBox.TabIndex = 6;
@@ -110,7 +107,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(401, 46);
+            this.searchButton.Location = new System.Drawing.Point(401, 7);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(59, 23);
             this.searchButton.TabIndex = 5;
@@ -120,8 +117,9 @@
             // 
             // pathTextBox
             // 
-            this.pathTextBox.Location = new System.Drawing.Point(101, 48);
+            this.pathTextBox.Location = new System.Drawing.Point(101, 9);
             this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.ReadOnly = true;
             this.pathTextBox.Size = new System.Drawing.Size(291, 20);
             this.pathTextBox.TabIndex = 4;
             this.pathTextBox.Text = "C:\\";
@@ -129,7 +127,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 51);
+            this.label1.Location = new System.Drawing.Point(7, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 3;
@@ -144,51 +142,6 @@
             this.saveButton.Text = "Save and close";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // recDiskLabel
-            // 
-            this.recDiskLabel.AutoSize = true;
-            this.recDiskLabel.Location = new System.Drawing.Point(7, 19);
-            this.recDiskLabel.Name = "recDiskLabel";
-            this.recDiskLabel.Size = new System.Drawing.Size(81, 13);
-            this.recDiskLabel.TabIndex = 1;
-            this.recDiskLabel.Text = "Recording disk:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "A:",
-            "B:",
-            "C:",
-            "D:",
-            "E:",
-            "F:",
-            "G:",
-            "H:",
-            "I:",
-            "J:",
-            "K:",
-            "L:",
-            "M:",
-            "N:",
-            "O:",
-            "P:",
-            "Q:",
-            "R:",
-            "S:",
-            "T:",
-            "U:",
-            "V:",
-            "W:",
-            "X:",
-            "Y:",
-            "Z:"});
-            this.comboBox1.Location = new System.Drawing.Point(101, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(41, 21);
-            this.comboBox1.TabIndex = 0;
             // 
             // updateTabPage
             // 
@@ -207,6 +160,26 @@
             this.updateTabPage.TabIndex = 1;
             this.updateTabPage.Text = "Update";
             this.updateTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(217, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 19);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "LPH - Let\'s Play Helper";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LetsPlayHelper.Properties.Resources.logoICO;
+            this.pictureBox1.Location = new System.Drawing.Point(418, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // currentVersionLabel
             // 
@@ -279,25 +252,16 @@
             this.checkForButton.UseVisualStyleBackColor = true;
             this.checkForButton.Click += new System.EventHandler(this.checkForButton_Click);
             // 
-            // pictureBox1
+            // groupBox1
             // 
-            this.pictureBox1.Image = global::LetsPlayHelper.Properties.Resources.logoICO;
-            this.pictureBox1.Location = new System.Drawing.Point(418, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(217, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 19);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "LPH - Let\'s Play Helper";
+            this.groupBox1.Controls.Add(this.skypeCheckBox);
+            this.groupBox1.Controls.Add(this.TScheckBox);
+            this.groupBox1.Location = new System.Drawing.Point(9, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 64);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Additional features";
             // 
             // SettingsWindow
             // 
@@ -318,6 +282,8 @@
             this.updateTabPage.ResumeLayout(false);
             this.updateTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -332,8 +298,6 @@
         private System.Windows.Forms.WebBrowser changelogBrowser;
         private System.Windows.Forms.Button checkForButton;
         private System.Windows.Forms.Label changeLogLabel;
-        private System.Windows.Forms.Label recDiskLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label availVersionLabel;
         private System.Windows.Forms.Label currentVersionLabel;
@@ -346,5 +310,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

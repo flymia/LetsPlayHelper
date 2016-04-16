@@ -33,7 +33,7 @@ namespace LetsPlayHelper.src.windows
 
             um = new UpdateManager();
 
-            comboBox1.Text = Properties.Settings.Default.recDisk.ToString();
+            
             pathTextBox.Text = Properties.Settings.Default.recPath.ToString();
 
             if(Properties.Settings.Default.skypeAutoAFK == true)
@@ -78,7 +78,7 @@ namespace LetsPlayHelper.src.windows
         /// </summary>
         private void saveButton_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.recDisk = comboBox1.Text;
+           
             Properties.Settings.Default.recPath = pathTextBox.Text;
 
             if (skypeCheckBox.Checked)

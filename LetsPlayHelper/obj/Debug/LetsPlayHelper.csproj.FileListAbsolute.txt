@@ -24,3 +24,5 @@ D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\bin\Debug
 D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\bin\Debug\LetsPlayHelper.application
 D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\LetsPlayHelper.exe.manifest
 D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\obj\Debug\LetsPlayHelper.application
+D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\bin\Debug\GlobalHotKey.dll
+D:\Dokumente\Visual Studio 2015\Projekte\LetsPlayHelper\LetsPlayHelper\bin\Debug\GlobalHotKey.pdb

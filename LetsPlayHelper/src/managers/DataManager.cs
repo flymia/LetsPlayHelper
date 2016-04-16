@@ -79,6 +79,18 @@ namespace LetsPlayHelper.src.managers
             long HDPercentageUsed = 100 - (100 * a.AvailableFreeSpace / a.TotalSize);
             return Convert.ToInt32(HDPercentageUsed);
         }
+
+        public bool startPathExists()
+        {
+            if (File.Exists(folder))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
                 
     }
 }

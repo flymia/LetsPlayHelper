@@ -64,7 +64,7 @@ namespace LetsPlayHelper.src.managers
                 }
                 else
                 {
-                    MessageBox.Show("Skype is not running!");
+                    
                 }
             }
           
@@ -86,7 +86,7 @@ namespace LetsPlayHelper.src.managers
                 }
                 else
                 {
-                    MessageBox.Show("Skype is not running!");
+                    
                 }
             }
         }
